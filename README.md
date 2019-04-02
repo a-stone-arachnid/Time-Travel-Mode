@@ -1,30 +1,30 @@
-##Screenshot / Code Snippet
+## Screenshot / Code Snippet
 
 [![enter image description here][1]][2]
 
 (click to make bigger)
 
-##About
+## About
 
 Keeps the 2019 Stack Exchange April Fool's Day theme, all the time!
 
 Inspired by [this post on Meta.SE](https://meta.stackexchange.com/q/326037/388442)
 
-###Download
+### Download
 
 Get it [here], or on [Stack Apps].
 
-###Platform
+### Platform
 
 Tested in Netscape Navigator 3.0, isn't supposed to work in Internet Explorer.
 
 (Jokes aside, tested with Tampermonkey)
 
-##Code
+## Code
 
 Made in jQuery!
 
-##Changelog
+## Changelog
 
 **Version 1.1:** Fixed view counter
 

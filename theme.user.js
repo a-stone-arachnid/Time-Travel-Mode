@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         Stack Exchange 90's theme
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
+// @updateURL    https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
+// @downloadURL  https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
 // @description  Go back in time!
 // @author       a stone arachnid
 // @match        https://*.stackexchange.com/questions/*

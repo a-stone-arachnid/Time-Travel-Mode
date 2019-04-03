@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stack Exchange 90's theme
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @updateURL    https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
 // @downloadURL  https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
 // @description  Go back in time!
@@ -55,7 +55,7 @@ body {
 }
 
 .container .favicon {
-    background-image: url("https://meta.stackexchange.com/content/Img/april-fools-2019/broken-image.png?v=a2722a3b4e69");
+    background-image: url("https://i.stack.imgur.com/v7beF.png");
     background-position: 0px;
 }
 
@@ -206,17 +206,17 @@ body {
 }
 
 #tm-footer {
-    background-image: url("https://meta.stackexchange.com/content/Img/april-fools-2019/guestbook-tile.png?v=a3115b974309");
+    background-image: url("https://i.stack.imgur.com/Uc10K.png");
 }
 
 #tm-footer-top {
-    background-image: url("https://meta.stackexchange.com/content/Img/april-fools-2019/pencil-border.png?v=16dd39c85511");
+    background-image: url("https://i.stack.imgur.com/g1Bsl.png");
     height: 30px;
     margin-bottom: 75px;
 }
 
 #tm-footer-bottom {
-    background-image: url("https://meta.stackexchange.com/content/Img/april-fools-2019/footer-border.gif?v=2f26a0868ebf");
+    background-image: url("https://i.stack.imgur.com/Iuako.gif");
     height: 30px;
     margin-top: 75px;
 }
@@ -262,37 +262,37 @@ se.ready(function () {
         var _h = '';
         _h += '<div id="tm-header" class="bg-black-900 ta-center py24 overflow-hidden">';
         _h += '<div id="tm-scroll">';
-        _h += '<img src="https://meta.stackexchange.com/content/Img/april-fools-2019/headline.gif?v=f81430a4e488" alt="Welcome to Stack Overflow" />';
+        _h += '<img src="https://i.stack.imgur.com/TFzLS.gif" alt="Welcome to Stack Overflow" />';
         _h += '</div>';
         _h += '</div>';
         $("body").prepend(_h);
 
         // Unicorns?
-        $("#left-sidebar").prepend('<img class="tm-unicorn-front" src="https://meta.stackexchange.com/content/Img/april-fools-2019/unicorn-front-half.png?v=3b572eca29f8" alt="UNI..."/>');
-        $(".container").append('<img class="tm-unicorn-back" src="https://meta.stackexchange.com/content/Img/april-fools-2019/unicorn-back-half.png?v=1a044240263b" alt="...CORN"/>');
+        $("#left-sidebar").prepend('<img class="tm-unicorn-front" src="https://i.stack.imgur.com/lrSWK.png" alt="UNI..."/>');
+        $(".container").append('<img class="tm-unicorn-back" src="https://i.stack.imgur.com/Pe85Z.png" alt="...CORN"/>');
 
         // Left sidebar link
         var _l = '';
         _l += '<div class="w100 ta-center fc-white ff-comic mt32">';
-        _l += '<img class="w100 mb24" src="https://meta.stackexchange.com/content/Img/april-fools-2019/caution-tape.png?v=e922b1b2376d" />';
+        _l += '<img class="w100 mb24" src="https://i.stack.imgur.com/1c2Mk.png" />';
         _l += '<p class="tt-uppercase fw-bold fs3 mb24">~Under Construction~</p>';
         _l += '<p class="mb0">Big changes for Y2K!</p>';
         _l += '<a href="#" class="js-tm-sidebar-toggle s-btn s-btn__primary d-inline-block fc-white td-none mt24">Go to the future</a>';
-        _l += '<img class="w100 mt24" src="https://meta.stackexchange.com/content/Img/april-fools-2019/caution-tape.png?v=e922b1b2376d" />';
+        _l += '<img class="w100 mt24" src="https://i.stack.imgur.com/1c2Mk.png" />';
         _l += '</div>';
         $("#left-sidebar nav").append(_l);
 
         // View Counter
-        var __3 = $("#qinfo tr:nth-child(2) td:last-child b").text();
+        var __3 = $("#qinfo tr:nth-child(2) td:last-child .label-key b").text();
         console.log(__3);
         var __6 = __3.split(" ");
-        var __9 = '<span id="tm-views">'+__6[0]+'</span> '+__6[1];
+        var __9 = '<span id="tm-views">'+__6[0].replace(/,/g,"")+'</span> '+__6[1];
         $("#qinfo tr:nth-child(2) td:last-child b").html(__9);
 
         var _f = ''; // Injected footer
         _f += '<div id="tm-footer">';
         _f += '<div id="tm-footer-top"></div>';
-        _f += '<h1 class="ta-center"><img class="wmx100" src="https://meta.stackexchange.com/content/Img/april-fools-2019/guestbook.png?v=af7ae3191a68" alt="Guestbook"></h1>';
+        _f += '<h1 class="ta-center"><img class="wmx100" src="https://i.stack.imgur.com/UtpOa.png" alt="Guestbook"></h1>';
         _f += '<div class="grid mx-auto wmx8 ff-comic fc-white md:fd-column">';
         _f += '<div class="js-tm-form-container tm-form-container grid--cell5 grid--cell12 p12 fc-white">';
         _f += '<form id="js-tm-form">';
@@ -313,16 +313,22 @@ se.ready(function () {
         // Site footer
         $(".site-footer--copyright p")
             .before('<p class="fw-bold fc-white mb0 ff-comic fs-body1">Proudly built in Notepad</p>')
-            .after('<p class="fw-bold fc-white ff-comic tt-uppercase fs-body1">Best viewed in <img class="d-inline-block" src="https://meta.stackexchange.com/content/Img/april-fools-2019/netscape-badge.png?v=090cdcefe523" alt="Netscape 3.0"></p>');
+            .after('<p class="fw-bold fc-white ff-comic tt-uppercase fs-body1">Best viewed in <img class="d-inline-block" src="https://i.stack.imgur.com/9e5RT.png" alt="Netscape 3.0"></p>');
 
 
         // Gif injections
-        var globe = '<img src="https://meta.stackexchange.com/content/Img/april-fools-2019/globe.gif?v=d8211e5aae84" class="tm-globe" />';
+        var globe = '<img src="https://i.stack.imgur.com/Txh9N.gif" class="tm-globe" />';
         $("svg.svg-icon.iconGlobe").before(globe).remove();
+
+        var yourAnswer = $("#post-form > .space");
+        if(yourAnswer.length) {
+            var answer_img = '<img src="https://i.stack.imgur.com/2TdH8.png" alt="Your Answer" />';
+            yourAnswer.html(answer_img);
+        }
 
         var $hnqHeadline = $("#hot-network-questions h4");
         if ($hnqHeadline.length) {
-            var flame = '<img src="https://meta.stackexchange.com/content/Img/april-fools-2019/fire.gif?v=a3a5393ce037" class="tm-fire" />';
+            var flame = '<img src="https://i.stack.imgur.com/74roz.gif" class="tm-fire" />';
             $hnqHeadline.append(flame).prepend(flame);
         }
 
@@ -526,7 +532,6 @@ se.ready(function () {
         // Particles!
 
         function Particle() {
-            console.log("Particle!");
             this.character = "*";
             this.lifeSpan = 120; //ms
             this.initialStyles ={

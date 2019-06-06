@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Decorated Cursor
-// @version      1
+// @version      2
 // @description  Get the fancy mouse found in the 2019 April Fools theme network-wide!
 // @author       a stone arachnid
 // @include      https://*stackoverflow.com/*
@@ -14,6 +14,7 @@
 // @grant        none
 // ==/UserScript==
 (function($,se){
+    "use strict";
     const style = `
 .js-cursor-container{
     font: 25px "Times New Roman", Times, serif;
@@ -85,9 +86,10 @@ se.ready(()=>{
 
         }
 
-        function loop() {
-            requestAnimationFrame(loop);
-            updateParticles();
+        function loop(){
+            setInterval(function(){
+                updateParticles()
+            }, 1000/60);
         }
 
         // Particles!

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stack Exchange 90's theme
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @updateURL    https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
 // @downloadURL  https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
 // @description  Go back in time!
@@ -339,10 +339,9 @@ se.ready(function () {
     }
 
     function initSidebar() {
-        $(".js-tm-sidebar-toggle").click(function (e) {
+        $(".js-tm-sidebar-toggle").click(function(e) {
             e.preventDefault();
-            $.cookie("tm2019_script", "1", { path: '/', expires: 2 });
-            window.location.reload(false);
+            se.helpers.showFancyOverlay({message:"To return to the future, disable the \"Stack Exchange 90's Theme\" userscript."});
         })
     }
 
@@ -525,8 +524,9 @@ se.ready(function () {
         }
 
         function loop() {
-            requestAnimationFrame(loop);
-            updateParticles();
+            setInterval(function() {
+                updateParticles();
+            }, 1000/60);
         }
 
         // Particles!

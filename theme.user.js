@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Stack Exchange 90's theme
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @updateURL    https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
 // @downloadURL  https://github.com/a-stone-arachnid/Time-Travel-Mode/raw/master/theme.user.js
 // @description  Go back in time!
@@ -242,6 +242,26 @@ body {
 
 .site-footer .-link {
     text-decoration: underline;
+}
+
+.js-follow-post, .js-follow-post:hover {
+    color: blue !important;
+    text-decoration: underline;
+}
+* {
+    scrollbar-color:unset !important;
+}
+table, .s-table, table.s-table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    border:1px outset #999;
+}
+table td, .s-table td, table.s-table td {
+    border:1px inset #999 !important;
+}
+table th, .s-table th, table.s-table th {
+    background-color:unset;
+    border:1px inset #999 !important;
 }
 `;
     $("<style>").text(styles).appendTo("head");

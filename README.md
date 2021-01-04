@@ -26,7 +26,9 @@ Made in jQuery!
 
 ## Changelog
 
-**Version 1.3:** Moved images to i.stack.imgur.com so they don't get erased
+**Version 1.5:** Updated for some new Stack Exchange features (follow questions, tables).  
+**Version 1.4:** Bug fixes  
+**Version 1.3:** Moved images to i.stack.imgur.com  
 **Version 1.2:** Automatic updates from GitHub  
 **Version 1.1:** Fixed view counter
 
